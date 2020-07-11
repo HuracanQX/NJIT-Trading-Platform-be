@@ -11,10 +11,10 @@
     </appender>
 
     <appender name="njittp" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>njittp_log/njittp.log</File>
-        <!--<File>/developer/apache-tomcat-7.0.73/logs/njittp.log</File>-->
+        <!--<File>njittp_log/njittp.log</File>-->
+        <File>/developer/apache-tomcat-7.0.73/logs/njittp.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>njittp_log/njittp.log.%d{yyyy-MM-dd}.zip</fileNamePattern>
+            <fileNamePattern>/developer/apache-tomcat-7.0.73/logs/njittp.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
@@ -26,9 +26,13 @@
 
     <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<File>d:/njittplog/error.log</File>-->
-        <File>njittp_log/error.log</File>
+        <File>/developer/apache-tomcat-7.0.73/logs/error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+<<<<<<< HEAD
             <fileNamePattern>njittp_log/error.log.%d{yyyy-MM-dd}.zip</fileNamePattern>
+=======
+            <fileNamePattern>/developer/apache-tomcat-7.0.73/logs/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+>>>>>>> v1.0
             <!--<fileNamePattern>d:/njittplog/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
             <append>true</append>
             <maxHistory>10</maxHistory>
