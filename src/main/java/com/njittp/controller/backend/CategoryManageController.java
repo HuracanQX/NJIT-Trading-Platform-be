@@ -23,7 +23,7 @@ public class CategoryManageController {
     private ICategoryService iCategoryService;
     @RequestMapping("add_category.do")
     @ResponseBody
-    public ServerResponse addCategory(HttpSession session,String categoryName,@RequestParam(value = "patentId",defaultValue = "0") int parentId){
+    public ServerResponse addCategory(HttpSession session,String categoryName,@RequestParam(value = "parentId",defaultValue = "0") int parentId){
 
         User user = (User)session.getAttribute(Const.CURRENT_USER);
         if (user==null){
